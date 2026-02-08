@@ -13,18 +13,18 @@ export const SLIDES: SlideData[] = [
     type: SlideType.TEXT_IMAGE_SPLIT,
     title: "L'Ogresse Énergétique",
     subtitle: "Le Problème",
-    content: "L'Intelligence Artificielle a un appétit féroce. Entraîner un seul grand modèle de langage (comme GPT-3) a consommé autant d'énergie que 120 voitures américaines pendant un an.<br/><br/> <b>La Peur :</b> Avec la multiplication des usages, nous craignons une explosion de la demande électrique mondiale qui annulerait tous nos efforts de sobriété.<br/><br/>Comment sauver le climat si nos machines dévorent toute notre électricité ?",
+    content: "L'Intelligence Artificielle a un appétit féroce.<br/><br/>Entraîner un seul grand modèle de langage (comme GPT-3) a consommé autant d'énergie que 120 voitures américaines pendant un an.<br/><br/> <b>La Peur :</b> Avec la multiplication des usages, nous craignons une explosion de la demande électrique mondiale qui annulerait tous nos efforts de sobriété.<br/><br/>Comment sauver le climat si nos machines dévorent toute notre électricité ?",
     source: "Université du Massachusetts, Amherst (2019)",
     sourceUrl: "https://arxiv.org/abs/1906.02243",
-    // Chemin absolu vers l'image servie depuis la racine (dossier public)
-    imageUrl: "/cars2.jpg"
+    // Utilisation du lien GitHub Raw fourni par l'utilisateur
+    imageUrl: "https://github.com/VieiraHenrique/AI-energy/blob/main/public/cars2.jpg?raw=true"
   },
   {
     id: 3,
     type: SlideType.TEXT_GRAPH_SPLIT,
     title: "Le Découplage Invisible",
     subtitle: "La Réalité",
-    content: "Nous confondons l'usage et la consommation. Grâce à l'amélioration constante du matériel (Loi de Koomey), nous faisons \"plus avec moins\".<br/><br/><strong>La Preuve :</strong> Entre 2010 et 2020, le trafic Internet mondial a été multiplié par 15 (1500%). Le nombre d'utilisateurs a doublé.<br/>Pourtant, la consommation électrique des Data Centers est restée quasi-plate (+10 %).<br/><br/>L'IA paie sa propre dette énergétique par l'efficacité.",
+    content: "Cependant, nous confondons usage et consommation.<br/><br/> Grâce à l'amélioration constante du matériel (Loi de Koomey), nous faisons \"plus avec moins\". (efficience)<br/><br/><strong>La Preuve :</strong> Entre 2010 et 2020, le trafic Internet mondial a été multiplié par 15 (1500%). Le nombre d'utilisateurs a doublé.<br/><br/>Pourtant, la consommation électrique des Data Centers est restée quasi-plate (+10 %).<br/><br/>L'IA paie sa propre dette énergétique par l'efficacité.",
     source: "Agence Internationale de l'Énergie (IEA), 2020",
     sourceUrl: "https://www.iea.org/energy-system/buildings/data-centres-and-data-transmission-networks",
     graphType: 'area',
@@ -37,7 +37,7 @@ export const SLIDES: SlideData[] = [
       { name: '2020', traffic: 1500, energy: 110 },
     ],
     graphKeys: [
-        { key: 'traffic', color: '#3b82f6', label: 'Trafic Internet (x15)' },
+        { key: 'traffic', color: '#3b82f6', label: 'Trafic Internet (x15 - 1500%) ' },
         { key: 'energy', color: '#10b981', label: 'Conso. Énergie (+10%)' }
     ]
   },
