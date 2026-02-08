@@ -23,9 +23,30 @@ export const Slide: React.FC<SlideProps> = ({ data, isLast, isActive }) => {
   }, [isActive]);
 
   const renderSource = () => {
-    if (!data.source) return null;
+    // Priority 1: Multiple sources
+    if (data.sources && data.sources.length > 0) {
+        return (
+            <div className="flex flex-col md:flex-row flex-wrap md:items-center gap-y-2 gap-x-4 mt-6 text-xs text-slate-500 italic leading-7">
+                <span className="opacity-70">Sources :</span>
+                {data.sources.map((src, idx) => (
+                    <a
+                        key={idx}
+                        href={src.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center hover:text-emerald-400 transition-colors group"
+                    >
+                        {src.text}
+                        <ExternalLink className="w-3 h-3 ml-1 opacity-50 group-hover:opacity-100" />
+                        {idx < (data.sources?.length || 0) - 1 && <span className="ml-4 text-slate-700 hidden md:inline">|</span>}
+                    </a>
+                ))}
+            </div>
+        );
+    }
 
-    if (data.sourceUrl) {
+    // Priority 2: Single source with URL
+    if (data.sourceUrl && data.source) {
         return (
             <a 
                 href={data.sourceUrl} 
@@ -39,7 +60,12 @@ export const Slide: React.FC<SlideProps> = ({ data, isLast, isActive }) => {
         );
     }
 
-    return <p className="text-xs text-slate-500 italic mt-6 leading-7">Source: {data.source}</p>;
+    // Priority 3: Single source text only
+    if (data.source) {
+        return <p className="text-xs text-slate-500 italic mt-6 leading-7">Source: {data.source}</p>;
+    }
+
+    return null;
   };
 
   const renderContent = () => {
@@ -69,6 +95,25 @@ export const Slide: React.FC<SlideProps> = ({ data, isLast, isActive }) => {
           </div>
         );
 
+      case SlideType.SECTION:
+        return (
+          <div className="w-full h-full flex flex-col items-center justify-center text-center px-6 relative overflow-hidden">
+             {/* Background Decoration */}
+             <div className="absolute inset-0 bg-gradient-to-b from-slate-900 via-emerald-900/20 to-slate-900 z-0"></div>
+             
+             <div className={`transition-all duration-1000 ease-out z-10 ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-90'}`}>
+                <div className="mb-8 inline-block p-4 rounded-full bg-emerald-500/10 border border-emerald-500/20">
+                    <Zap className="w-12 h-12 md:w-16 md:h-16 text-emerald-400" />
+                </div>
+                <h2 className="text-sm md:text-xl font-bold tracking-[0.3em] text-emerald-400 uppercase mb-4">{data.subtitle || "Section"}</h2>
+                <h1 className="text-6xl md:text-9xl font-black text-white tracking-tighter mb-8 drop-shadow-2xl">
+                  {data.title}
+                </h1>
+                <div className="h-1.5 w-32 bg-gradient-to-r from-transparent via-emerald-500 to-transparent mx-auto rounded-full opacity-80"></div>
+             </div>
+          </div>
+        );
+
       case SlideType.QUOTE:
         return (
             <div className="w-full h-full flex flex-col items-center justify-center container mx-auto px-6 md:px-24 text-center relative z-10">
@@ -79,7 +124,7 @@ export const Slide: React.FC<SlideProps> = ({ data, isLast, isActive }) => {
                 <div className={`max-w-4xl mx-auto transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
                     <div className="flex items-center justify-center space-x-2 text-emerald-400 mb-10">
                         <Lightbulb className="w-6 h-6" />
-                        <span className="uppercase tracking-widest text-sm font-bold">{data.title}</span>
+                        <span className="uppercase tracking-widest text-lg font-bold">{data.title}</span>
                     </div>
 
                     <div className="relative px-4">
@@ -98,7 +143,7 @@ export const Slide: React.FC<SlideProps> = ({ data, isLast, isActive }) => {
             <div className={`flex-1 space-y-6 transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
                <div className="flex items-center space-x-2 text-rose-400 mb-2">
                  <AlertTriangle className="w-6 h-6" />
-                 <span className="uppercase tracking-widest text-sm font-bold">{data.subtitle || "Impact"}</span>
+                 <span className="uppercase tracking-widest text-lg font-bold">{data.subtitle || "Impact"}</span>
                </div>
               <h2 className="text-4xl md:text-5xl font-bold text-white leading-tight">
                 {data.title}
@@ -130,7 +175,7 @@ export const Slide: React.FC<SlideProps> = ({ data, isLast, isActive }) => {
             <div className={`flex-1 space-y-6 text-left transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
                <div className="flex items-center space-x-2 text-blue-400 mb-2">
                  <TrendingUp className="w-6 h-6" />
-                 <span className="uppercase tracking-widest text-sm font-bold">{data.subtitle || "Analyse"}</span>
+                 <span className="uppercase tracking-widest text-lg font-bold">{data.subtitle || "Analyse"}</span>
                </div>
               <h2 className="text-4xl md:text-5xl font-bold text-white leading-tight">
                 {data.title}

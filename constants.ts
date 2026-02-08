@@ -10,6 +10,13 @@ export const SLIDES: SlideData[] = [
   },
   {
     id: 2,
+    type: SlideType.SECTION,
+    title: "Énergie",
+    subtitle: "Chapitre 1",
+    content: "",
+  },
+  {
+    id: 3,
     type: SlideType.TEXT_IMAGE_SPLIT,
     title: "L'Ogresse Énergétique",
     subtitle: "Le Problème",
@@ -20,7 +27,7 @@ export const SLIDES: SlideData[] = [
     imageUrl: "https://raw.githubusercontent.com/VieiraHenrique/public_images/refs/heads/main/cars2.jpg"
   },
   {
-    id: 3,
+    id: 4,
     type: SlideType.TEXT_GRAPH_SPLIT,
     title: "Le Découplage Invisible",
     subtitle: "La Réalité",
@@ -43,30 +50,59 @@ export const SLIDES: SlideData[] = [
     ]
   },
   {
-    id: 4,
+    id: 5,
     type: SlideType.QUOTE,
     title: "L'Aveuglement Cognitif",
     subtitle: "Perspective",
     content: "L'être humain a tendance à juger une innovation uniquement sur son coût d'investissement, en ignorant son retour sur investissement.<br/><br/>Nous voyons l'énergie que l'IA consomme (le Data Center), mais nous sommes aveugles à l'énergie que l'IA économise et peut économiser davantage (l'optimisation du système).<br/><br/>Juger l'IA sur sa consommation brute, c'est comme reprocher à une isolation thermique de coûter cher à l'installation, en oubliant qu'elle va diviser la facture de chauffage par deux au long de 30 ans.",
   },
   {
-    id: 5,
+    id: 6,
     type: SlideType.TEXT_GRAPH_SPLIT,
-    title: "Modélisation Climatique",
-    subtitle: "L'Application",
-    content: "Grâce à la puissance de calcul massive, nous pouvons désormais simuler des scénarios climatiques complexes avec une précision inégalée.<br/><br/>L'IA identifie des modèles invisibles à l'œil humain, permettant aux chercheurs d'accélérer la découverte de nouveaux matériaux pour la capture du carbone et le stockage de l'énergie.",
-    graphType: 'area',
-    graphData: [
-      { name: '2020', efficiency: 65, prediction: 68 },
-      { name: '2021', efficiency: 68, prediction: 72 },
-      { name: '2022', efficiency: 75, prediction: 76 },
-      { name: '2023', efficiency: 79, prediction: 82 },
-      { name: '2024', efficiency: 85, prediction: 88 },
-      { name: '2025', efficiency: 92, prediction: 95 },
+    title: "La Grande Échelle de l'Électricité",
+    subtitle: "Perspective Globale",
+    content: `
+        <div class="space-y-6">
+            <div>
+                <strong class="text-blue-400 block mb-2 text-xl">1. L'Autoroute de l'Information (~800 TWh)</strong>
+                <p class="text-lg text-slate-300 leading-relaxed">
+                    Si l'on combine tous les Data Centers (Netflix, Cloud...) et les réseaux (4G, Fibre), Internet consomme 30 à 40 fois plus que l'IA spécifique.<br/>
+                    <br/>L'IA n'est qu'une toute petite "application" qui tourne sur cette immense infrastructure existante.
+                </p>
+            </div>
+            <div>
+                <strong class="text-rose-400 block mb-2 text-xl">2. Le Gaspillage (Appareils en Veille ~400 TWh)</strong>
+                <p class="text-lg text-slate-300 leading-relaxed">
+                    La simple "veille" de nos appareils (TV, Box, Chargeurs) consomme 15 à 20 fois plus que l'IA mondiale. C'est une énergie brûlée pour rien.
+                </p>
+            </div>
+            <div>
+                <strong class="text-yellow-400 block mb-2 text-xl">3. Le Confort (Sèche-linges USA ~60 TWh)</strong>
+                <p class="text-lg text-slate-300 leading-relaxed">
+                    Les sèche-linges d'un seul pays (USA) consomment 2 fois plus que toute l'IA mondiale.
+                </p>
+            </div>
+        </div>
+    `,
+    sources: [
+        { text: "IEA (Internet)", url: "https://www.iea.org/energy-system/buildings/data-centres-and-data-transmission-networks" },
+        { text: "BCE (IA)", url: "https://www.ecb.europa.eu/press/economic-bulletin/focus/2025/html/ecb.ebbox202502_03~8eba688e29.en.html" },
+        { text: "EIA (Sèche-linges)", url: "https://www.eia.gov/consumption/residential/" }
     ],
-    graphKeys: [
-        { key: 'prediction', color: '#8b5cf6', label: 'Modèle IA' },
-        { key: 'efficiency', color: '#10b981', label: 'Efficacité Réelle' }
+    graphType: 'bar',
+    graphTitle: "Consommation Électrique Annuelle (TWh)",
+    graphData: [
+      { name: 'Internet (Monde)', value: 800, color: '#3b82f6', label: 'Internet (800 TWh)' },
+      { name: 'Appareils en Veille (Monde)', value: 400, color: '#f43f5e', label: 'Veille (400 TWh)' },
+      { name: 'Sèche-linges (USA)', value: 60, color: '#f97316', label: 'Sèche-linges (60 TWh)' },
+      { name: 'IA (Monde)', value: 25, color: '#10b981', label: 'IA (25 TWh)' },
     ]
+  },
+  {
+    id: 7,
+    type: SlideType.QUOTE,
+    title: "L'Analogie du Pompier",
+    subtitle: "Investissement vs Dépense",
+    content: `« Personne ne reproche au camion de pompier de consommer du diesel. Pourquoi ? Parce qu'il éteint l'incendie.<br/><br/><strong class="text-rose-400">Le Gaspillage (Veille/Confort) :</strong> C'est du carburant brûlé pour rouler en rond. Ça ne résout aucun problème structurel.<br/><br/><strong class="text-emerald-400">L'Investissement (IA) :</strong> C'est le carburant du camion de pompier. C'est le coût nécessaire pour déployer la solution.<br/><br/><strong>Réalité :</strong> L'IA est l'outil qui permet de découvrir les matériaux de demain et d'optimiser les énergies d'aujourd'hui. Ce n'est pas un problème de consommation, c'est une solution de transition. »`
   }
 ];

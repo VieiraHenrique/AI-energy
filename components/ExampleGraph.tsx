@@ -70,20 +70,23 @@ export const ExampleGraph: React.FC<ExampleGraphProps> = ({ data, keys, type = '
   const renderBarChart = () => (
     <BarChart
       data={data}
+      layout="vertical"
       margin={{ top: 20, right: 30, left: 20, bottom: 20 }}
     >
-      <CartesianGrid strokeDasharray="3 3" stroke="#334155" vertical={false} />
+      <CartesianGrid strokeDasharray="3 3" stroke="#334155" horizontal={false} />
       <XAxis 
-        dataKey="name" 
+        type="number"
         stroke="#94a3b8" 
         tick={{fontSize: 11}} 
         tickLine={false}
         axisLine={false}
-        interval={0}
       />
       <YAxis 
+        dataKey="name" 
+        type="category"
         stroke="#94a3b8" 
-        tick={{fontSize: 10}} 
+        tick={{fontSize: 11, width: 120}} 
+        width={130}
         tickLine={false}
         axisLine={false}
       />
@@ -91,7 +94,7 @@ export const ExampleGraph: React.FC<ExampleGraphProps> = ({ data, keys, type = '
         cursor={{fill: 'rgba(255,255,255,0.05)'}}
         contentStyle={{ backgroundColor: '#0f172a', borderColor: '#334155', color: '#f8fafc', borderRadius: '8px' }}
       />
-      <Bar dataKey="value" radius={[4, 4, 0, 0]}>
+      <Bar dataKey="value" radius={[0, 4, 4, 0]} barSize={40}>
         {data.map((entry, index) => (
           <Cell key={`cell-${index}`} fill={entry.color || '#3b82f6'} />
         ))}
@@ -102,7 +105,7 @@ export const ExampleGraph: React.FC<ExampleGraphProps> = ({ data, keys, type = '
   return (
     <div className="w-full h-[300px] md:h-[400px] bg-slate-800/50 p-4 rounded-xl border border-slate-700 backdrop-blur-sm shadow-xl">
       <div className="flex justify-between items-center mb-4">
-          <h3 className="text-slate-300 font-semibold text-xs uppercase tracking-wider">
+          <h3 className="text-slate-300 font-semibold text-lg uppercase tracking-wider">
             {title || (type === 'bar' ? 'Comparaison Carbone' : 'Données Analytiques')}
           </h3>
       </div>
