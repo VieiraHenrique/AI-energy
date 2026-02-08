@@ -17,7 +17,7 @@ export const SLIDES: SlideData[] = [
     source: "Université du Massachusetts, Amherst (2019)",
     sourceUrl: "https://arxiv.org/abs/1906.02243",
     // Utilisation du lien GitHub Raw fourni par l'utilisateur
-    imageUrl: "https://github.com/VieiraHenrique/AI-energy/blob/main/public/cars2.jpg?raw=true"
+    imageUrl: "https://raw.githubusercontent.com/VieiraHenrique/public_images/refs/heads/main/cars2.jpg"
   },
   {
     id: 3,
