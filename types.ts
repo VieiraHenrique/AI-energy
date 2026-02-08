@@ -29,7 +29,7 @@ export interface SlideData {
   imageUrl?: string;
   graphData?: any[]; 
   graphKeys?: GraphKey[]; // Configuration for the graph lines
-  graphType?: 'area' | 'bar'; // Type of graph to render
+  graphType?: 'area' | 'bar' | 'pie' | 'bubble'; // Type of graph to render
   graphTitle?: string; // Optional custom title for the graph
   icon?: string; // Optional icon name for SECTION slides (e.g., 'zap', 'cloud')
 }
