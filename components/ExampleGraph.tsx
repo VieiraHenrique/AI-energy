@@ -9,9 +9,10 @@ interface ExampleGraphProps {
   data: any[];
   keys?: GraphKey[];
   type?: 'area' | 'bar';
+  title?: string;
 }
 
-export const ExampleGraph: React.FC<ExampleGraphProps> = ({ data, keys, type = 'area' }) => {
+export const ExampleGraph: React.FC<ExampleGraphProps> = ({ data, keys, type = 'area', title }) => {
   // Default configuration if no keys provided (backward compatibility)
   const graphKeys = keys || [
     { key: 'prediction', color: '#3b82f6', label: 'Prédiction' },
@@ -102,7 +103,7 @@ export const ExampleGraph: React.FC<ExampleGraphProps> = ({ data, keys, type = '
     <div className="w-full h-[300px] md:h-[400px] bg-slate-800/50 p-4 rounded-xl border border-slate-700 backdrop-blur-sm shadow-xl">
       <div className="flex justify-between items-center mb-4">
           <h3 className="text-slate-300 font-semibold text-xs uppercase tracking-wider">
-            {type === 'bar' ? 'Comparaison Carbone' : 'Données Analytiques'}
+            {title || (type === 'bar' ? 'Comparaison Carbone' : 'Données Analytiques')}
           </h3>
       </div>
       

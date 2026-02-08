@@ -28,6 +28,7 @@ export const SLIDES: SlideData[] = [
     source: "Agence Internationale de l'Énergie (IEA), 2020",
     sourceUrl: "https://www.iea.org/energy-system/buildings/data-centres-and-data-transmission-networks",
     graphType: 'area',
+    graphTitle: "Augmentation en pourcentage du trafic internet et de la consommation d'énergie",
     graphData: [
       { name: '2010', traffic: 100, energy: 100 },
       { name: '2012', traffic: 300, energy: 102 },

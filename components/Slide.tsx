@@ -122,7 +122,12 @@ export const Slide: React.FC<SlideProps> = ({ data, isLast, isActive }) => {
             {/* Graph Section (Right) */}
              <div className={`flex-1 w-full transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
                 {data.graphData && isVisible ? (
-                    <ExampleGraph data={data.graphData} keys={data.graphKeys} type={data.graphType} />
+                    <ExampleGraph 
+                      data={data.graphData} 
+                      keys={data.graphKeys} 
+                      type={data.graphType} 
+                      title={data.graphTitle}
+                    />
                 ) : (
                     <div className="w-full h-[300px] md:h-[400px] border border-dashed border-slate-700 rounded-xl flex items-center justify-center text-slate-600">
                         Chargement des données...

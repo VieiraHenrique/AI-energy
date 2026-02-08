@@ -22,4 +22,5 @@ export interface SlideData {
   graphData?: any[]; 
   graphKeys?: GraphKey[]; // Configuration for the graph lines
   graphType?: 'area' | 'bar'; // Type of graph to render
+  graphTitle?: string; // Optional custom title for the graph
 }
