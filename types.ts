@@ -2,6 +2,7 @@ export enum SlideType {
   COVER = 'COVER',
   TEXT_IMAGE_SPLIT = 'TEXT_IMAGE_SPLIT',
   TEXT_GRAPH_SPLIT = 'TEXT_GRAPH_SPLIT',
+  QUOTE = 'QUOTE',
 }
 
 export interface GraphKey {

@@ -44,6 +44,13 @@ export const SLIDES: SlideData[] = [
   },
   {
     id: 4,
+    type: SlideType.QUOTE,
+    title: "L'Aveuglement Cognitif",
+    subtitle: "Perspective",
+    content: "L'être humain a tendance à juger une innovation uniquement sur son coût d'investissement, en ignorant son retour sur investissement.<br/><br/>Nous voyons l'énergie que l'IA consomme (le Data Center), mais nous sommes aveugles à l'énergie que l'IA économise et peut économiser davantage (l'optimisation du système).<br/><br/>Juger l'IA sur sa consommation brute, c'est comme reprocher à une isolation thermique de coûter cher à l'installation, en oubliant qu'elle va diviser la facture de chauffage par deux au long de 30 ans.",
+  },
+  {
+    id: 5,
     type: SlideType.TEXT_GRAPH_SPLIT,
     title: "Modélisation Climatique",
     subtitle: "L'Application",

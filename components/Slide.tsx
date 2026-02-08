@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { SlideData, SlideType } from '../types';
-import { ChevronDown, Wind, Zap, Cpu, AlertTriangle, TrendingUp, ExternalLink } from 'lucide-react';
+import { ChevronDown, Wind, Zap, Cpu, AlertTriangle, TrendingUp, ExternalLink, Quote, Lightbulb } from 'lucide-react';
 import { ExampleGraph } from './ExampleGraph';
 
 interface SlideProps {
@@ -62,11 +62,34 @@ export const Slide: React.FC<SlideProps> = ({ data, isLast, isActive }) => {
                 </h2>
                 <div className="mt-12 h-1 w-24 bg-gradient-to-r from-emerald-500 to-blue-500 mx-auto rounded-full"></div>
                 <div 
-                    className="mt-8 text-slate-400 max-w-lg mx-auto leading-7 [&>b]:text-slate-200 [&>strong]:text-slate-200 [&>b]:font-bold [&>strong]:font-bold"
+                    className="mt-8 text-lg text-slate-400 max-w-lg mx-auto leading-7 [&>b]:text-slate-200 [&>strong]:text-slate-200 [&>b]:font-bold [&>strong]:font-bold"
                     dangerouslySetInnerHTML={{ __html: data.content }}
                 />
             </div>
           </div>
+        );
+
+      case SlideType.QUOTE:
+        return (
+            <div className="w-full h-full flex flex-col items-center justify-center container mx-auto px-6 md:px-24 text-center relative z-10">
+                {/* Decorative Quote Icon */}
+                <Quote className={`w-24 h-24 md:w-32 md:h-32 text-emerald-500/10 absolute top-[15%] left-[5%] md:left-[10%] transform -rotate-12 transition-all duration-1000 ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-50'}`} />
+                <Quote className={`w-24 h-24 md:w-32 md:h-32 text-blue-500/10 absolute bottom-[15%] right-[5%] md:right-[10%] transform rotate-12 scale-x-[-1] transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-50'}`} />
+
+                <div className={`max-w-4xl mx-auto transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+                    <div className="flex items-center justify-center space-x-2 text-emerald-400 mb-10">
+                        <Lightbulb className="w-6 h-6" />
+                        <span className="uppercase tracking-widest text-sm font-bold">{data.title}</span>
+                    </div>
+
+                    <div className="relative px-4">
+                        <div 
+                            className="text-lg md:text-2xl text-white leading-relaxed md:leading-loose font-light"
+                            dangerouslySetInnerHTML={{ __html: data.content }}
+                        />
+                    </div>
+                </div>
+            </div>
         );
 
       case SlideType.TEXT_IMAGE_SPLIT:
