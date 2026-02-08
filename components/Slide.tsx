@@ -88,11 +88,13 @@ export const Slide: React.FC<SlideProps> = ({ data, isLast, isActive }) => {
             </div>
             <div className={`flex-1 h-[40vh] md:h-[60vh] w-full relative transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}>
               {data.imageUrl && (
-                <img 
-                    src={data.imageUrl} 
-                    alt={data.title} 
-                    className="w-full h-full object-cover rounded-2xl shadow-2xl relative z-10 border border-slate-700"
-                />
+                <div className="w-full h-full rounded-2xl shadow-2xl relative z-10 border border-slate-700 overflow-hidden bg-slate-800">
+                    <img 
+                        src={data.imageUrl} 
+                        alt={data.title} 
+                        className="w-full h-full object-cover opacity-90 hover:opacity-100 transition-opacity duration-500"
+                    />
+                </div>
               )}
             </div>
           </div>

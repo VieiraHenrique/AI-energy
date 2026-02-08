@@ -16,8 +16,8 @@ export const SLIDES: SlideData[] = [
     content: "L'Intelligence Artificielle a un appétit féroce. Entraîner un seul grand modèle de langage (comme GPT-3) a consommé autant d'énergie que 120 voitures américaines pendant un an.<br/><br/> <b>La Peur :</b> Avec la multiplication des usages, nous craignons une explosion de la demande électrique mondiale qui annulerait tous nos efforts de sobriété.<br/><br/>Comment sauver le climat si nos machines dévorent toute notre électricité ?",
     source: "Université du Massachusetts, Amherst (2019)",
     sourceUrl: "https://arxiv.org/abs/1906.02243",
-    // Chemin explicite vers le dossier public à la racine
-    imageUrl: "./cars2.jpg"
+    // Chemin absolu vers l'image servie depuis la racine (dossier public)
+    imageUrl: "/cars2.jpg"
   },
   {
     id: 3,
