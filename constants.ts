@@ -14,6 +14,7 @@ export const SLIDES: SlideData[] = [
     title: "Énergie",
     subtitle: "Chapitre 1",
     content: "",
+    icon: "zap"
   },
   {
     id: 3,
@@ -104,5 +105,13 @@ export const SLIDES: SlideData[] = [
     title: "L'Analogie du Pompier",
     subtitle: "Investissement vs Dépense",
     content: `« Personne ne reproche au camion de pompier de consommer du diesel. Pourquoi ? Parce qu'il éteint l'incendie.<br/><br/><strong class="text-rose-400">Le Gaspillage (Veille/Confort) :</strong> C'est du carburant brûlé pour rouler en rond. Ça ne résout aucun problème structurel.<br/><br/><strong class="text-emerald-400">L'Investissement (IA) :</strong> C'est le carburant du camion de pompier. C'est le coût nécessaire pour déployer la solution.<br/><br/><strong>Réalité :</strong> L'IA est l'outil qui permet de découvrir les matériaux de demain et d'optimiser les énergies d'aujourd'hui. Ce n'est pas un problème de consommation, c'est une solution de transition. »`
+  },
+  {
+    id: 8,
+    type: SlideType.SECTION,
+    title: "Carbone",
+    subtitle: "Chapitre 2",
+    content: "",
+    icon: "cloud"
   }
 ];

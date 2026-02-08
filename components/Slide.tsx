@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { SlideData, SlideType } from '../types';
-import { ChevronDown, Wind, Zap, Cpu, AlertTriangle, TrendingUp, ExternalLink, Quote, Lightbulb } from 'lucide-react';
+import { ChevronDown, Wind, Zap, Cpu, AlertTriangle, TrendingUp, ExternalLink, Quote, Lightbulb, Cloud } from 'lucide-react';
 import { ExampleGraph } from './ExampleGraph';
 
 interface SlideProps {
@@ -96,6 +96,8 @@ export const Slide: React.FC<SlideProps> = ({ data, isLast, isActive }) => {
         );
 
       case SlideType.SECTION:
+        const SectionIcon = data.icon === 'cloud' ? Cloud : Zap;
+        
         return (
           <div className="w-full h-full flex flex-col items-center justify-center text-center px-6 relative overflow-hidden">
              {/* Background Decoration */}
@@ -103,7 +105,7 @@ export const Slide: React.FC<SlideProps> = ({ data, isLast, isActive }) => {
              
              <div className={`transition-all duration-1000 ease-out z-10 ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-90'}`}>
                 <div className="mb-8 inline-block p-4 rounded-full bg-emerald-500/10 border border-emerald-500/20">
-                    <Zap className="w-12 h-12 md:w-16 md:h-16 text-emerald-400" />
+                    <SectionIcon className="w-12 h-12 md:w-16 md:h-16 text-emerald-400" />
                 </div>
                 <h2 className="text-sm md:text-xl font-bold tracking-[0.3em] text-emerald-400 uppercase mb-4">{data.subtitle || "Section"}</h2>
                 <h1 className="text-6xl md:text-9xl font-black text-white tracking-tighter mb-8 drop-shadow-2xl">
