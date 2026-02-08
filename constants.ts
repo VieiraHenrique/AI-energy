@@ -6,7 +6,7 @@ export const SLIDES: SlideData[] = [
     type: SlideType.COVER,
     title: "IA & La Révolution Verte",
     subtitle: "Comment l'intelligence artificielle redéfinit notre avenir énergétique.",
-    content: "Une exploration narrative de la synergie entre technologie de pointe et préservation planétaire.",
+    content: "Une exploration narrative de la synergie entre technologie de pointe et préservation planétaire par Henrique Vieira (2026).",
   },
   {
     id: 2,
