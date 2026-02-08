@@ -17,7 +17,7 @@ export const SLIDES: SlideData[] = [
     source: "Université du Massachusetts, Amherst (2019)",
     sourceUrl: "https://arxiv.org/abs/1906.02243",
     // Chemin explicite vers le dossier public à la racine
-    imageUrl: "./cars.png"
+    imageUrl: "./cars2.jpg"
   },
   {
     id: 3,
