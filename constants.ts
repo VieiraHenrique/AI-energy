@@ -39,7 +39,7 @@ export const SLIDES: SlideData[] = [
     type: SlideType.TEXT_GRAPH_SPLIT,
     title: "Le Découplage Invisible",
     subtitle: "La Réalité",
-    content: "Cependant, nous confondons usage et consommation.<br/><br/> Grâce à l'amélioration constante du matériel (Loi de Koomey), nous faisons \"plus avec moins\" (efficience) de manière consistante au long des années.<br/><br/><strong>La Preuve :</strong> Entre 2010 et 2020, le trafic Internet mondial a été multiplié par 15 (1500%). Le nombre d'utilisateurs a doublé.<br/><br/>Pourtant, la consommation électrique des Data Centers est restée quasi-plate (+10 %).<br/><br/>L'IA paie sa propre dette énergétique par l'efficacité.",
+    content: "Cependant, nous confondons usage et consommation.<br/><br/> Grâce à l'amélioration constante du matériel (Loi de Koomey), nous faisons \"plus avec moins\" (efficience) et ce de manière consistante au long des années.<br/><br/><strong>La Preuve :</strong> Entre 2010 et 2020, le trafic Internet mondial a été multiplié par 15 (1500%). Le nombre d'utilisateurs a doublé.<br/><br/>Pourtant, la consommation électrique des Data Centers est restée quasi-plate (+10 %).<br/><br/>L'IA paie sa propre dette énergétique par l'efficacité.",
     source: "Agence Internationale de l'Énergie (IEA), 2020",
     sourceUrl: "https://www.iea.org/energy-system/buildings/data-centres-and-data-transmission-networks",
     graphType: 'area',
@@ -70,40 +70,53 @@ export const SLIDES: SlideData[] = [
     title: "La Grande Échelle de l'Électricité",
     subtitle: "Perspective Globale",
     content: `
-        <div class="space-y-6">
-            <div>
-                <strong class="text-blue-400 block mb-2 text-xl">1. L'Autoroute de l'Information (~800 TWh)</strong>
-                <p class="text-lg text-slate-300 leading-relaxed">
-                    Si l'on combine tous les Data Centers (Netflix, Cloud...) et les réseaux (4G, Fibre), Internet consomme 30 à 40 fois plus que l'IA spécifique.<br/>
-                    <br/>L'IA n'est qu'une toute petite "application" qui tourne sur cette immense infrastructure existante.
-                </p>
+        <div class="grid grid-cols-1 gap-4">
+            <div class="border-l-2 border-slate-500 pl-4 py-1">
+                <strong class="text-slate-400 block text-base">Aluminium (Monde)</strong>
+                <p class="text-sm text-slate-300 leading-tight">La production mondiale d'aluminium nécessite une infrastructure électrique massive pour transformer le minerai brut.</p>
             </div>
-            <div>
-                <strong class="text-rose-400 block mb-2 text-xl">2. Le Gaspillage (Appareils en Veille ~400 TWh)</strong>
-                <p class="text-lg text-slate-300 leading-relaxed">
-                    La simple "veille" de nos appareils (TV, Box, Chargeurs) consomme 15 à 20 fois plus que l'IA mondiale. C'est une énergie brûlée pour rien.
-                </p>
+            <div class="border-l-2 border-blue-500 pl-4 py-1">
+                <strong class="text-blue-400 block text-base">Internet Global</strong>
+                <p class="text-sm text-slate-300 leading-tight">L'ensemble des serveurs et réseaux alimente la totalité de notre consommation numérique quotidienne.</p>
             </div>
-            <div>
-                <strong class="text-yellow-400 block mb-2 text-xl">3. Le Confort (Sèche-linges USA ~60 TWh)</strong>
-                <p class="text-lg text-slate-300 leading-relaxed">
-                    Les sèche-linges d'un seul pays (USA) consomment 2 fois plus que toute l'IA mondiale.
-                </p>
+            <div class="border-l-2 border-rose-500 pl-4 py-1">
+                <strong class="text-rose-400 block text-base">Appareils en Veille</strong>
+                <p class="text-sm text-slate-300 leading-tight">Les appareils électroniques en mode veille consomment de l'énergie sans interaction de l'utilisateur.</p>
+            </div>
+            <div class="border-l-2 border-amber-500 pl-4 py-1">
+                <strong class="text-amber-400 block text-base">Climatisation (USA)</strong>
+                <p class="text-sm text-slate-300 leading-tight">Le refroidissement des foyers américains constitue une dépense énergétique majeure liée au confort thermique.</p>
+            </div>
+            <div class="border-l-2 border-violet-500 pl-4 py-1">
+                <strong class="text-violet-400 block text-base">Bitcoin (Monde)</strong>
+                <p class="text-sm text-slate-300 leading-tight">Le réseau Bitcoin utilise l'électricité pour sécuriser les transactions via des calculs cryptographiques répétitifs.</p>
+            </div>
+            <div class="border-l-2 border-orange-500 pl-4 py-1">
+                <strong class="text-orange-400 block text-base">Sèche-linges (USA)</strong>
+                <p class="text-sm text-slate-300 leading-tight">L'usage des sèche-linges aux États-Unis représente une charge stable sur le réseau électrique national.</p>
+            </div>
+            <div class="border-l-2 border-emerald-500 pl-4 py-1">
+                <strong class="text-emerald-400 block text-base">IA (Spécifique)</strong>
+                <p class="text-sm text-slate-300 leading-tight">La consommation des modèles d'IA reste marginale comparée aux infrastructures industrielles et résidentielles existantes.</p>
             </div>
         </div>
     `,
     sources: [
+        { text: "IAI (Aluminium)", url: "https://international-aluminium.org/statistics/primary-aluminium-smelting-energy-intensity/" },
         { text: "IEA (Internet)", url: "https://www.iea.org/energy-system/buildings/data-centres-and-data-transmission-networks" },
-        { text: "BCE (IA)", url: "https://www.ecb.europa.eu/press/economic-bulletin/focus/2025/html/ecb.ebbox202502_03~8eba688e29.en.html" },
-        { text: "EIA (Sèche-linges)", url: "https://www.eia.gov/consumption/residential/" }
+        { text: "EIA (Clim/Sèche-linges)", url: "https://www.eia.gov/consumption/residential/" },
+        { text: "CBECI (Bitcoin)", url: "https://ccaf.io/cbnsi/cbeci" }
     ],
     graphType: 'bar',
     graphTitle: "Consommation Électrique Annuelle (TWh)",
     graphData: [
-      { name: 'Internet (Monde)', value: 800, color: '#3b82f6', label: 'Internet (800 TWh)' },
-      { name: 'Appareils en Veille (Monde)', value: 400, color: '#f43f5e', label: 'Veille (400 TWh)' },
-      { name: 'Sèche-linges (USA)', value: 60, color: '#f97316', label: 'Sèche-linges (60 TWh)' },
-      { name: 'IA (Monde)', value: 25, color: '#10b981', label: 'IA (25 TWh)' },
+      { name: 'Aluminium (Monde)', value: 1000, color: '#94a3b8' },
+      { name: 'Internet (Monde)', value: 800, color: '#3b82f6' },
+      { name: 'Veille (Monde)', value: 400, color: '#f43f5e' },
+      { name: 'Climatisation (USA)', value: 260, color: '#f59e0b' },
+      { name: 'Bitcoin (Monde)', value: 150, color: '#8b5cf6' },
+      { name: 'Sèche-linges (USA)', value: 60, color: '#f97316' },
+      { name: 'IA (Monde)', value: 25, color: '#10b981' },
     ]
   },
   {
