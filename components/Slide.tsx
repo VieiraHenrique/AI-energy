@@ -80,7 +80,7 @@ export const Slide: React.FC<SlideProps> = ({ data, isLast, isActive }) => {
                    <Wind className="w-12 h-12 text-emerald-400" />
                    <Cpu className="w-12 h-12 text-blue-400" />
                 </div>
-                <h1 className="text-5xl md:text-8xl font-black bg-clip-text text-transparent bg-gradient-to-r from-emerald-400 to-blue-500 mb-6 drop-shadow-lg leading-tight">
+                <h1 className="text-4xl md:text-6xl font-black bg-clip-text text-transparent bg-gradient-to-r from-emerald-400 to-blue-500 mb-6 drop-shadow-lg leading-tight pb-2">
                 {data.title}
                 </h1>
                 <h2 className="text-xl md:text-3xl text-slate-300 font-light max-w-3xl mx-auto leading-7">

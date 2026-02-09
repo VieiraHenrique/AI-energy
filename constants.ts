@@ -4,16 +4,16 @@ export const SLIDES: SlideData[] = [
   {
     id: 1,
     type: SlideType.COVER,
-    title: "IA & La Révolution Verte",
-    subtitle: "Comment l'intelligence artificielle redéfinit notre avenir énergétique.",
-    content: "Une exploration narrative de la synergie entre technologie de pointe et préservation planétaire par Henrique Vieira (2026).",
+    title: "Le Courage du Progrès",
+    subtitle: "L'Intelligence Artificielle comme architecture d'un monde durable et prospère.",
+    content: "Un plaidoyer pour l'optimisme technologique par Henrique Vieira (2026).",
   },
   {
     id: 2,
     type: SlideType.QUOTE,
     title: "Changer de Regard",
     subtitle: "Avant-propos",
-    content: "Les chiffres sont des miroirs : ils reflètent souvent ce que nous cherchons à y voir – nos peurs ou nos espoirs. La vraie question n'est pas seulement \"que disent les données ?\", mais \"que décidons-nous d'en faire ?\".<br/><br/>Face aux mêmes graphiques, le pessimiste voit une fin inéluctable, l'optimiste voit un problème à résoudre."
+    content: "Les chiffres sont des miroirs : ils reflètent souvent ce que nous cherchons à y voir – nos peurs ou nos espoirs. La vraie question n'est pas seulement \"que disent les données ?\", mais \"que décidons-nous d'en faire ?\".<br/><br/>Face aux mêmes graphiques, le pessimiste voit une fin inéluctable, l'optimiste voit un problème à résoudre et un horizon de possibilités."
   },
   {
     id: 3,
@@ -70,36 +70,9 @@ export const SLIDES: SlideData[] = [
     title: "La Grande Échelle de l'Électricité",
     subtitle: "Perspective Globale",
     content: `
-        <div class="grid grid-cols-1 gap-4">
-            <div class="border-l-2 border-slate-500 pl-4 py-1">
-                <strong class="text-slate-400 block text-base">Aluminium (Monde)</strong>
-                <p class="text-sm text-slate-300 leading-tight">La production mondiale d'aluminium nécessite une infrastructure électrique massive pour transformer le minerai brut.</p>
-            </div>
-            <div class="border-l-2 border-blue-500 pl-4 py-1">
-                <strong class="text-blue-400 block text-base">Internet Global</strong>
-                <p class="text-sm text-slate-300 leading-tight">L'ensemble des serveurs et réseaux alimente la totalité de notre consommation numérique quotidienne.</p>
-            </div>
-            <div class="border-l-2 border-rose-500 pl-4 py-1">
-                <strong class="text-rose-400 block text-base">Appareils en Veille</strong>
-                <p class="text-sm text-slate-300 leading-tight">Les appareils électroniques en mode veille consomment de l'énergie sans interaction de l'utilisateur.</p>
-            </div>
-            <div class="border-l-2 border-amber-500 pl-4 py-1">
-                <strong class="text-amber-400 block text-base">Climatisation (USA)</strong>
-                <p class="text-sm text-slate-300 leading-tight">Le refroidissement des foyers américains constitue une dépense énergétique majeure liée au confort thermique.</p>
-            </div>
-            <div class="border-l-2 border-violet-500 pl-4 py-1">
-                <strong class="text-violet-400 block text-base">Bitcoin (Monde)</strong>
-                <p class="text-sm text-slate-300 leading-tight">Le réseau Bitcoin utilise l'électricité pour sécuriser les transactions via des calculs cryptographiques répétitifs.</p>
-            </div>
-            <div class="border-l-2 border-orange-500 pl-4 py-1">
-                <strong class="text-orange-400 block text-base">Sèche-linges (USA)</strong>
-                <p class="text-sm text-slate-300 leading-tight">L'usage des sèche-linges aux États-Unis représente une charge stable sur le réseau électrique national.</p>
-            </div>
-            <div class="border-l-2 border-emerald-500 pl-4 py-1">
-                <strong class="text-emerald-400 block text-base">IA (Spécifique)</strong>
-                <p class="text-sm text-slate-300 leading-tight">La consommation des modèles d'IA reste marginale comparée aux infrastructures industrielles et résidentielles existantes.</p>
-            </div>
-        </div>
+        <p class="text-lg md:text-xl text-slate-300 leading-relaxed border-l-4 border-slate-500 pl-6">
+            Face aux géants industriels comme l'aluminium, à l'infrastructure Internet existante ou même au gaspillage domestique (veille, climatisation), la consommation de l'IA reste anecdotique. Elle ne représente qu'une fraction infime de l'appétit énergétique mondial.
+        </p>
     `,
     sources: [
         { text: "IAI (Aluminium)", url: "https://international-aluminium.org/statistics/primary-aluminium-smelting-energy-intensity/" },
