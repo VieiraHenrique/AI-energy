@@ -13,7 +13,7 @@ export const SLIDES: SlideData[] = [
     type: SlideType.QUOTE,
     title: "Changer de Regard",
     subtitle: "Avant-propos",
-    content: "Les chiffres sont des miroirs : ils reflètent souvent ce que nous cherchons à y voir – nos peurs ou nos espoirs. La vraie question n'est pas seulement \"que disent les données ?\", mais \"que décidons-nous d'en faire ?\".<br/><br/>Face aux mêmes graphiques, le cynique voit une fin inéluctable, là où l'ingénieur voit un problème à résoudre et ce qui pourrait l'aider à le faire."
+    content: "Les chiffres sont des miroirs : ils reflètent souvent ce que nous cherchons à y voir – nos peurs ou nos espoirs. La vraie question n'est pas seulement \"que disent les données ?\", mais \"que décidons-nous d'en faire ?\".<br/><br/>Face aux mêmes graphiques, le pessimiste voit une fin inéluctable, l'optimiste voit un problème à résoudre."
   },
   {
     id: 3,
@@ -62,7 +62,7 @@ export const SLIDES: SlideData[] = [
     type: SlideType.QUOTE,
     title: "L'Aveuglement Cognitif",
     subtitle: "Perspective",
-    content: "L'être humain a tendance à juger une innovation uniquement sur son coût d'investissement, en ignorant son retour sur investissement.<br/><br/>Nous voyons l'énergie que l'IA consomme (le Data Center), mais nous sommes aveugles à l'énergie que l'IA économise et peut économiser davantage (l'optimisation du système).<br/><br/>Juger l'IA sur sa consommation brute, c'est comme reprocher à une isolation thermique de coûter cher à l'installation, en oubliant qu'elle va diviser la facture de chauffage par deux au long de 30 ans.",
+    content: "Nous avons tendance à juger une innovation uniquement sur son coût d'investissement, en ignorant son retour sur investissement.<br/><br/>Nous voyons l'énergie que l'IA consomme (le Data Center), mais nous sommes aveugles à l'énergie que l'IA économise et peut économiser davantage (l'optimisation du système).<br/><br/>Juger l'IA sur sa consommation brute, c'est comme reprocher à une isolation thermique de coûter cher à l'installation, en oubliant qu'elle va diviser la facture de chauffage par deux au long de 30 ans.",
   },
   {
     id: 7,
@@ -108,13 +108,6 @@ export const SLIDES: SlideData[] = [
   },
   {
     id: 8,
-    type: SlideType.QUOTE,
-    title: "L'Analogie du Pompier",
-    subtitle: "Investissement vs Dépense",
-    content: `« Personne ne reproche au camion de pompier de consommer du diesel. Pourquoi ? Parce qu'il éteint l'incendie.<br/><br/><strong class="text-rose-400">Le Gaspillage (Veille/Confort) :</strong> C'est du carburant brûlé pour rouler en rond. Ça ne résout aucun problème structurel.<br/><br/><strong class="text-emerald-400">L'Investissement (IA) :</strong> C'est le carburant du camion de pompier. C'est le coût nécessaire pour déployer la solution.<br/><br/><strong>Réalité :</strong> L'IA est l'outil qui permet de découvrir les matériaux de demain et d'optimiser les énergies d'aujourd'hui. Ce n'est pas un problème de consommation, c'est une solution de transition. »`
-  },
-  {
-    id: 9,
     type: SlideType.SECTION,
     title: "Carbone",
     subtitle: "Chapitre 2",
@@ -122,7 +115,7 @@ export const SLIDES: SlideData[] = [
     icon: "cloud"
   },
   {
-    id: 10,
+    id: 9,
     type: SlideType.TEXT_GRAPH_SPLIT,
     title: "Les Vrais Coupables",
     subtitle: "Le Camembert Mondial",
@@ -152,7 +145,7 @@ export const SLIDES: SlideData[] = [
     ]
   },
   {
-    id: 11,
+    id: 10,
     type: SlideType.TEXT_GRAPH_SPLIT,
     title: "La Poutre dans l'Oeil",
     subtitle: "L'Échelle des Priorités",
