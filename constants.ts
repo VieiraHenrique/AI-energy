@@ -53,7 +53,7 @@ export const SLIDE_SETS: Record<string, SlideData[]> = {
         type: SlideType.TEXT_GRAPH_SPLIT,
         title: "L'Échelle de l'Électricité",
         subtitle: "La Nuance",
-        content: "Avant de céder à la panique, il est nécessaire de mettre en perspective la réelle consommation de l'IA en ce moment dans le monde.<br/><br/>En réalité, l'entraînement et l'usage des modèles ne représentent qu'une goutte d'eau (0,05 %) dans l'océan électrique. Avec 25 TWh annuels, l'IA reste bien inférieure à des usages domestiques triviaux.<br/><br/><b>Ce n'est en aucun cas nier le problème, qui est réel</b>. Mais la nuance est essentielle.",
+        content: "Avant de céder à la panique, il est nécessaire de mettre en perspective la réelle consommation de l'IA en ce moment dans le monde.<br/><br/>En réalité, l'entraînement et l'usage des modèles ne représentent qu'une goutte d'eau (0,05 %) dans l'océan électrique. Avec 25 TWh annuels, l'IA reste bien inférieure à des usages domestiques triviaux.<br/><br/><b>Ce n'est en aucun cas nier le problème, qui est bien réel</b>. Mais la nuance est essentielle.",
         sources: [
             { text: "IAI (Aluminium)", url: "https://international-aluminium.org/statistics/primary-aluminium-smelting-energy-intensity/" },
             { text: "IEA (Internet)", url: "https://www.iea.org/energy-system/buildings/data-centres-and-data-transmission-networks" },
@@ -66,7 +66,7 @@ export const SLIDE_SETS: Record<string, SlideData[]> = {
         graphData: [
         { name: 'Aluminium (Monde)', value: 1000, color: '#94a3b8' },
         { name: 'Internet (Monde)', value: 800, color: '#3b82f6' },
-        { name: 'Appareils en veille (Monde)', value: 400, color: '#f43f5e' },
+        { name: 'Appareils électroniques en veille (Monde)', value: 400, color: '#f43f5e' },
         { name: 'Climatisation (USA)', value: 260, color: '#f59e0b' },
         { name: 'Bitcoin (Monde)', value: 150, color: '#8b5cf6' },
         { name: 'Sèche-linges (USA)', value: 60, color: '#f97316' },
@@ -101,7 +101,7 @@ export const SLIDE_SETS: Record<string, SlideData[]> = {
         type: SlideType.TEXT_GRAPH_SPLIT,
         title: "Le Retour sur Investissement",
         subtitle: "Carbon Handprint",
-        content: "l'IA n'est pas une \"dépense\" d'énergie (comme un sèche-linge), c'est un \"investissement\". L'énergie qu'elle consomme sert à réduire le gaspillage dans les secteurs les plus polluants (transport, agriculture, industrie).<br/><br/> Le bilan net est largement positif : l'IA permet d'économiser beaucoup plus de CO2 qu'elle n'en émet.<br/><br/><strong>La Preuve Chiffrée :</strong> Selon le Boston Consulting Group (BCG), l'IA a le potentiel de réduire les émissions mondiales de gaz à effet de serre de 5 à 10 % d'ici 2030, alors qu'elle ne représente qu'une fraction de pourcent des émissions.<br/><br/><em>Exemple concret :</em> Google utilise l'IA pour optimiser le refroidissement de ses propres serveurs, réduisant la facture énergétique de 40 %. Imaginez cela dans le cadre de villes entières, pays, continents...",
+        content: "De plus, l'IA n'est pas une \"dépense\" d'énergie (comme un sèche-linge), c'est un \"investissement\".<br/><br/> L'énergie qu'elle consomme peut servir à réduire drastiquement le gaspillage dans les secteurs les plus polluants (transport, agriculture, industrie).<br/><br/><strong>La Preuve Chiffrée :</strong> Selon le Boston Consulting Group (BCG), l'IA a le potentiel de réduire les émissions mondiales de gaz à effet de serre de 5 à 10 % d'ici 2030, alors qu'elle ne représente qu'une fraction de pourcent des émissions.<br/><br/><em>Exemple concret :</em> Google utilise l'IA pour optimiser le refroidissement de ses propres serveurs, réduisant la facture énergétique de 40 %. Imaginez cela dans le cadre de villes entières, pays, continents...",
         sources: [
             { text: "BCG (Climate Change)", url: "https://www.bcg.com/publications/2023/how-ai-can-be-a-powerful-tool-in-the-fight-against-climate-change" },
             { text: "Google DeepMind (Cooling)", url: "https://deepmind.google/discover/blog/deepmind-ai-reduces-google-data-centre-cooling-bill-by-40/" }
