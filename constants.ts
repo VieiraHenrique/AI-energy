@@ -103,7 +103,7 @@ export const SLIDE_SETS: Record<string, SlideData[]> = {
         subtitle: "Carbon Handprint",
         content: "De plus, l'IA n'est pas une \"dépense\" d'énergie (comme un sèche-linge), c'est un \"investissement\".<br/><br/> L'énergie qu'elle consomme peut servir à réduire drastiquement le gaspillage dans les secteurs les plus polluants (transport, agriculture, industrie).<br/><br/><strong>La Preuve Chiffrée :</strong> Selon le Boston Consulting Group (BCG), l'IA a le potentiel de réduire les émissions mondiales de gaz à effet de serre de 5 à 10 % d'ici 2030, alors qu'elle ne représente qu'une fraction de pourcent des émissions.<br/><br/><em>Exemple concret :</em> Google utilise l'IA pour optimiser le refroidissement de ses propres serveurs, réduisant la facture énergétique de 40 %. Imaginez cela dans le cadre de villes entières, pays, continents...",
         sources: [
-            { text: "BCG (Climate Change)", url: "https://www.bcg.com/publications/2023/how-ai-can-be-a-powerful-tool-in-the-fight-against-climate-change" },
+            { text: "BCG (Climate Change)", url: "https://web-assets.bcg.com/ff/d7/90b70d9f405fa2b67c8498ed39f3/ai-for-the-planet-bcg-report-july-2022.pdf" },
             { text: "Google DeepMind (Cooling)", url: "https://deepmind.google/discover/blog/deepmind-ai-reduces-google-data-centre-cooling-bill-by-40/" }
         ],
         graphType: 'bar',
