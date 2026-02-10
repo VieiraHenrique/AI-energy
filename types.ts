@@ -33,3 +33,14 @@ export interface SlideData {
   graphTitle?: string; // Optional custom title for the graph
   icon?: string; // Optional icon name for SECTION slides (e.g., 'zap', 'cloud')
 }
+
+export interface TopicQuestion {
+  id: string;
+  label: string;
+  iconName?: string;
+}
+
+export interface Topic {
+  title: string;
+  questions: TopicQuestion[];
+}
